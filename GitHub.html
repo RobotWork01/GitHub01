@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>UiPath_01</title>
+<style>
+.sample_box6 {
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    background-color:lightblue; /*背景色*/#f6faee;
+    border-left: solid 10px darkblue; /*左ライン*/#6b8e23;
+    color:#000000;/*文字色*/
+}
+.sample_box6 p {
+    margin: 0; 
+    padding: 0;
+}
+</style>
+
+</head>
+<body bgcolor="ivory">
+<div class="sample_box6" style="width:80%;height:20px;">
+<span style="font-size:23px;">RobotWork01-GitHub</span>
+&nbsp;&nbsp;<a href="https://robotwork01.github.io/RobotWork01/RobotWork01.html">戻る</a>
+&nbsp;&nbsp;<a href="https://github.com/RobotWork01/GitHub/blob/main/README.md">ReadMe</a>
+</div>
+<pre>
+●GitHub 開発手順
+
+
+
+
+●GitHub LFS（Git Large File Storage、ギット・ラージ・ファイル・ストレージ）とは？
+
+１）大容量ファイルが存在するパスに移動する。
+２）git lfs 初期化する。
+   ＜git lfs install＞
+   C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>git lfs install
+   Updated Git hooks.
+   Git LFS initialized.
+３）git lfs track トラッキングする大容量ファイルを登録する。
+   ＜git lfs track "*.jpg"、git lfs track "*.mp4"＞
+   C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>git lfs track "*.jpg"
+   Tracking "*.jpg"
+   C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>git lfs track "*.mp4"
+   "*.mp4" already supported
+
+４）git add .gitattributes
+   ＜git add .gitattributes＞
+   C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>git add .gitattributes
+   C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>type .gitattributes
+   # Auto detect text files and perform LF normalization
+   * text=auto
+   *.mp4 filter=lfs diff=lfs merge=lfs -text
+   *.jpg filter=lfs diff=lfs merge=lfs -text
+
+５）git commit -m "Add design file" コミットする。
+  ＜git commit -m "Add design file"＞
+  C:\Users\xxxxx\OneDrive\ドキュメント\GitHub\UiPath>git commit -m "Add design file"
+  [main 7a5b2dc] Add design file
+   1 file changed, 1 insertion(+)
+
+</pre>
+</body>
+</html>
